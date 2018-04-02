@@ -3,15 +3,59 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>LION Discover | Trouver facilement la startup qui vous fait rêver</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
+    <!-- Navbar LION Discover -->
+    <div class="navbar-lion">
+      <!-- Logo -->
+      <a href="/" class="navbar-lion-brand">
+       <img src="<%= image_path('logo.png') %>" alt="logo">
+      </a>
+
+      <!-- Right Navigation -->
+      <div class="navbar-lion-right hidden-xs hidden-sm">
+        <a href="#description" class="navbar-lion-item navbar-lion-link">A propos</a>
+        <a href="#discover" class="navbar-lion-item navbar-lion-link">Discover</a>
+        <a href="" class="navbar-lion-item navbar-lion-link">Contact</a>
+      </div>
+
+      <!-- Dropdown appearing on mobile only -->
+      <div class="navbar-lion-item hidden-md hidden-lg">
+        <div class="dropdown">
+          <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-lion-dropdown-menu">
+            <li><a href="#description">A propos</a></li>
+            <li><a href="#discover">Discover</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End of the navbar -->
+
     <%= yield %>
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+      </div>
+      <div class="footer-copyright">
+        This footer is made with <i class="fas fa-heart"></i> by the Trublion Team
+      </div>
+    </div>
+    <!-- end of footer -->
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
   </body>
 </html>

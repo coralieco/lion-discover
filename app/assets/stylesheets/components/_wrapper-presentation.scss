@@ -1,0 +1,54 @@
+// background
+.wrapper {
+  background: white;
+  height: 500px;
+}
+
+// title of the wrapper
+.title_presentation{
+  text-align: center !important;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+// left content of the wrapper (wording)
+.content-left {
+  padding: 40px;
+  margin: 30px;
+  margin-left: -40px;
+}
+
+.presentation ul {
+  list-style: none;
+  padding: 10px;
+  width: 700px;
+}
+
+.presentation ul li{
+  margin: 20px;
+  font-size: 18px;
+  font-weight:lighter;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.presentation ul li svg{
+  margin-right: 10px;
+  color: #E0288E;
+}
+
+// Right content of the wrapper (image)
+#img-wrapper{
+  height: 350px;
+  width: 450px;
+}
+
+// For both content (left and right)
+.presentation {
+  display:flex;
+  justify-content: space-beetween;
+}
+
+
