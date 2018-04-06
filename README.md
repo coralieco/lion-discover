@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+*********************
+This is a prototype
+*********************
+
+This is a website where people from https://joinlion.co/ can discover the next startup that fit with their own goals and culture. 
