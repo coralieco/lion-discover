@@ -4,3 +4,4 @@ loadDynamicBannerText();
 
 import { bindSweetAlertButtonDemo } from '../components/sweetalert';
 bindSweetAlertButtonDemo();
+

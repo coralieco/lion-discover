@@ -6,11 +6,11 @@
 
 <div class="wrapper", id="description">
   <% if @startup.name == 'Comet' %>
-    <h3 class="startup_title"> XXX Chief Marketing Officer Chez Comet</h3>
+    <h3 class="startup_title"> Chief Marketing Officer Chez Comet</h3>
   <% elsif @startup.name == 'Side' %>
-    <h3 class="startup_title"> XXX Product manager chez Side</h3>
+    <h3 class="startup_title"> Product manager chez Side</h3>
   <% elsif @startup.name == 'Doctrine' %>
-    <h3 class="startup_title">XXX Développeur Back-end chez Doctrine</h3>
+    <h3 class="startup_title"> Développeur Back-end chez Doctrine</h3>
   <%end %>
   <div class="container presentation_startup">
     <div class="row">
@@ -25,16 +25,16 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="document.getElementById('myModaljobs').style.display='block'">&times;</button>
                     <h4 class="modal-title">Son métier en quelques mots </h4>
                   </div>
                   <div class="modal-body">
                     <% if @startup.name  == 'Comet'%>
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/GM9ZHkMDmds" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                      <iframe id= "iframeYoutube" width="560" height="315" src="https://www.youtube.com/embed/GM9ZHkMDmds" frameborder="0" allowfullscreen></iframe>
                    <% elsif @startup.name == 'Side' %>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe id= "iframeYoutube" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" frameborder="0" allowfullscreen></iframe>
                     <% elsif @startup.name == 'Doctrine'%>
-                     <iframe width="560" height="315" src="https://www.youtube.com/embed/auon4iQdX4w?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>>
+                     <iframe id= "iframeYoutube" width="560" height="315" src="https://www.youtube.com/embed/auon4iQdX4w?rel=0" frameborder="0" allowfullscreen></iframe>>
                     <% end %>
                   </div>
                 </div>
@@ -72,7 +72,7 @@
       </div>
       <br>
       <div class="col-xs-12 col-md-12">
-        <h3 class="startup_description">Tu souhaites recevoir les offres d'emplois de cette startup ? Remplie donc ce formulaire </h3>
+        <h3 class="startup_description">Recevez les offres d'emplois de cette startup par email</h3>
       </div>
     </div>
     <section class="home-newsletter">
@@ -83,7 +83,7 @@
               <div class="input-group">
                <input type="email" class="form-control" placeholder="Entre ton email">
                <span class="input-group-btn">
-                 <button class="btn btn-theme", id="sweet-alert-demo", type="submit">Envoyer</button>
+                 <button class="btn btn-theme", id="sweet-alert-demo", type="submit">Valider</button>
                </span>
              </div>
            </div>

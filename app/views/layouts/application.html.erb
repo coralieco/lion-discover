@@ -8,7 +8,10 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+   <!--  <#%= stylesheet_pack_tag 'application', media: 'all' %> -->
+    <link rel="stylesheet" href="path/to/plyr.css">
+
+
   </head>
   <body>
     <!-- Navbar LION Discover -->
@@ -60,8 +63,27 @@
     </div>
     <!-- end of footer -->
 
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-  </body>
-</html>
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_pack_tag 'application' %>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          /* Get iframe src attribute value i.e. YouTube video url
+          and store it in a variable */
+          var url = $("#iframeYoutube").attr('src');
+
+          /* Assign empty url value to the iframe src attribute when
+          modal hide, which stop the video playing */
+          $("#myModaljobs").on('hide.bs.modal', function(){
+            $("#iframeYoutube").attr('src', '');
+          });
+
+          /* Assign the initially stored url back to the iframe src
+          attribute when modal is displayed again */
+          $("#myModaljobs").on('show.bs.modal', function(){
+            $("#iframeYoutube").attr('src', url);
+          });
+        });
+      </script>
+    </body>
+  </html>
