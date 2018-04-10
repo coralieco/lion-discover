@@ -76,6 +76,17 @@
       </div>
     </div>
     <section class="home-newsletter">
+     <div class="container">
+        <div class="row">
+          <div class="col-sm-12 newsletter_margin">
+            <div class="single">
+              <div class="input-group">
+      <%= simple_form_for [@startup] do |f| %>
+        <%#= f.input "Text", placeholder: 'Ajoutez votre email', class: "form-control" %>
+        <%= f.submit "Valider", class: "btn btn-theme", id:"sweet-alert-demo", type: 'submit' %>
+      <% end %>
+
+<!--
       <div class="container">
         <div class="row">
           <div class="col-sm-12 newsletter_margin">
@@ -84,7 +95,7 @@
                <input type="email" class="form-control" placeholder="Entre ton email">
                <span class="input-group-btn">
                  <button class="btn btn-theme", id="sweet-alert-demo", type="submit">Valider</button>
-               </span>
+               </span> -->
              </div>
            </div>
          </div>
