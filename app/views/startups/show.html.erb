@@ -1,0 +1,95 @@
+<div class="banner-startup" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'banner_startup.jpeg', id: 'banner'; %>);">
+  <div class="banner-content">
+    <h1><%= @startup.name.upcase %></h1>
+  </div>
+</div>
+
+<div class="wrapper", id="description">
+  <% if @startup.name == 'Comet' %>
+    <h3 class="startup_title"> XXX Chief Marketing Officer Chez Comet</h3>
+  <% elsif @startup.name == 'Side' %>
+    <h3 class="startup_title"> XXX Product manager chez Side</h3>
+  <% elsif @startup.name == 'Doctrine' %>
+    <h3 class="startup_title">XXX Développeur Back-end chez Doctrine</h3>
+  <%end %>
+  <div class="container presentation_startup">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-1 col-md-4">
+        <div class="presentation_startup">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'jobs.jpeg' %>);">
+            <div class="card-description">
+              <h2>Quel est son job ?</h2>
+            </div>
+            <a href="#myModaljobs" class="btn btn-lg btn-primary card-link" data-toggle="modal"></a>                <!-- Modal HTML -->
+            <div id="myModaljobs" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Son métier en quelques mots </h4>
+                  </div>
+                  <div class="modal-body">
+                    <% if @startup.name  == 'Comet'%>
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/GM9ZHkMDmds" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                   <% elsif @startup.name == 'Side' %>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <% elsif @startup.name == 'Doctrine'%>
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/auon4iQdX4w?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-offset-2 col-md-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'culture.jpeg' %>);">
+          <div class="card-description">
+            <h2>Pourquoi <%= @startup.name.capitalize %> ?</h2>
+          </div>
+          <a href="#myModalculture" class="btn btn-lg btn-primary card-link" data-toggle="modal"></a>                <!-- Modal HTML -->
+          <div id="myModalculture" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title">La culture </h4>
+                </div>
+                <div class="modal-body">
+                  <% if @startup.name  == 'Comet'%>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JRGfTCay0aI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  <% elsif @startup.name == 'Side' %>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  <% elsif @startup.name == 'Doctrine'%>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/PP4GAgNba8E?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-xs-12 col-md-12">
+        <h3 class="startup_description">Tu souhaites recevoir les offres d'emplois de cette startup ? Remplie donc ce formulaire </h3>
+      </div>
+    </div>
+    <section class="home-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 newsletter_margin">
+            <div class="single">
+              <div class="input-group">
+               <input type="email" class="form-control" placeholder="Entre ton email">
+               <span class="input-group-btn">
+                 <button class="btn btn-theme", id="sweet-alert-demo", type="submit">Envoyer</button>
+               </span>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+  </div>
+</div>

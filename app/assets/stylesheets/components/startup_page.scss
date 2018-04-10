@@ -1,0 +1,82 @@
+.background{
+  background-color: white;
+  margin: 10px;
+  width: 100vh;
+
+}
+
+
+.banner-startup {
+  color: white;
+  text-align: center;
+  height: 368px !important;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 50% 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description_text h3 {
+  color: gray;
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+
+.startup_title {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-weight: 250;
+  font-size: 30px;
+}
+
+.presentation_startup {
+  margin: auto;
+}
+
+.startup_description {
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+  font-weight: 200;
+  font-size: 25px;
+}
+
+.home-newsletter .single {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.home-newsletter .single h2 {
+  font-size: 22px;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.home-newsletter .single .form-control {
+  height: 50px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px 0 0 20px; }
+.home-newsletter .single .form-control:focus {
+  box-shadow: none;
+  border-color: grey;
+}
+
+.home-newsletter .single .btn {
+  min-height: 50px;
+  border-radius: 0 20px 20px 0;
+  background: #243c4f;
+  color: #fff;
+}
+
+.newsletter_margin {
+  margin-bottom: 30px;
+}

@@ -1,7 +1,8 @@
 // background
 .wrapper {
   background: white;
-  height: 500px;
+  min-height: 500px;
+  height: auto;
 }
 
 // title of the wrapper
@@ -9,7 +10,7 @@
   font-weight: 500;
   font-size: 40px;
   margin: 0;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
 
