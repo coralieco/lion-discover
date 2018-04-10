@@ -25,12 +25,12 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <button type="button" id= "btn_yt" class="close" data-dismiss="modal" aria-hidden="true" onclick="document.getElementById('myModaljobs').style.display='block'">&times;</button>
+                    <button type="button" id= "btn_yt" class="close fancybox-close" data-dismiss="modal" aria-hidden="true" onclick="document.getElementById('myModaljobs').style.display='block'">&times;</button>
                     <h4 class="modal-title">Son métier en quelques mots </h4>
                   </div>
                   <div class="modal-body">
                     <% if @startup.name  == 'Comet'%>
-                      <iframe id= "iframeYoutube" width="560" height="315" src="https://www.youtube.com/embed/GM9ZHkMDmds" frameborder="0" allowfullscreen></iframe>
+                      <iframe id= "iframeYoutube" width="560" height="315" src="https://www.youtube.com/embed/GM9ZHkMDmds?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                    <% elsif @startup.name == 'Side' %>
                     <iframe id= "iframeYoutube" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" frameborder="0" allowfullscreen></iframe>
                     <% elsif @startup.name == 'Doctrine'%>

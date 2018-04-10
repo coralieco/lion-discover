@@ -1,0 +1,2 @@
+class FormNewsletter < ApplicationRecord
+end

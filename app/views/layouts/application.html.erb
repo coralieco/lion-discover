@@ -61,18 +61,17 @@
     </div>
     <!-- end of footer -->
 
-      <%= javascript_include_tag 'application' %>
-      <%= javascript_pack_tag 'application' %>
-      <%= javascript_include_tag "https://code.jquery.com/jquery-3.3.1.min.js" %>
-      <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-      <script type="text/javascript">
-        $('.myModaljobs').on('hide.bs.modal', function(e) {
-          var $if = $(e.delegateTarget).find('iframe');
-          var src = $if.attr("src");
-            $if.attr("src", '/empty.html');
-            $if.attr("src", src);
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+    <%= javascript_include_tag "https://code.jquery.com/jquery-3.3.1.min.js" %>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script language="javascript" type="text/javascript">
+      $(function(){
+       $('.close').click(function(){
+        $('iframe').attr('src', $('iframe').attr('src'));
         });
-      </script>
-    </body>
-  </html>
+      });
+    </script>
+  </body>
+</html>
