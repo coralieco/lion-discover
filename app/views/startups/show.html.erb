@@ -25,7 +25,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="document.getElementById('myModaljobs').style.display='block'">&times;</button>
+                    <button type="button" id= "btn_yt" class="close" data-dismiss="modal" aria-hidden="true" onclick="document.getElementById('myModaljobs').style.display='block'">&times;</button>
                     <h4 class="modal-title">Son métier en quelques mots </h4>
                   </div>
                   <div class="modal-body">
@@ -76,17 +76,6 @@
       </div>
     </div>
     <section class="home-newsletter">
-     <div class="container">
-        <div class="row">
-          <div class="col-sm-12 newsletter_margin">
-            <div class="single">
-              <div class="input-group">
-      <%= simple_form_for [@startup] do |f| %>
-        <%#= f.input "Text", placeholder: 'Ajoutez votre email', class: "form-control" %>
-        <%= f.submit "Valider", class: "btn btn-theme", id:"sweet-alert-demo", type: 'submit' %>
-      <% end %>
-
-<!--
       <div class="container">
         <div class="row">
           <div class="col-sm-12 newsletter_margin">
@@ -95,7 +84,7 @@
                <input type="email" class="form-control" placeholder="Entre ton email">
                <span class="input-group-btn">
                  <button class="btn btn-theme", id="sweet-alert-demo", type="submit">Valider</button>
-               </span> -->
+               </span>
              </div>
            </div>
          </div>

@@ -63,26 +63,16 @@
 
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>
+      <%= javascript_include_tag "https://code.jquery.com/jquery-3.3.1.min.js" %>
       <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script type="text/javascript">
-        $(document).ready(function(){
-          /* Get iframe src attribute value i.e. YouTube video url
-          and store it in a variable */
-          var url = $("#iframeYoutube").attr('src');
-
-          /* Assign empty url value to the iframe src attribute when
-          modal hide, which stop the video playing */
-          $("#myModaljobs").on('hide.bs.modal', function(){
-            $("#iframeYoutube").attr('src', '');
-          });
-
-          /* Assign the initially stored url back to the iframe src
-          attribute when modal is displayed again */
-          $("#myModaljobs").on('show.bs.modal', function(){
-            $("#iframeYoutube").attr('src', url);
-          });
+        $('.myModaljobs').on('hide.bs.modal', function(e) {
+          var $if = $(e.delegateTarget).find('iframe');
+          var src = $if.attr("src");
+            $if.attr("src", '/empty.html');
+            $if.attr("src", src);
         });
       </script>
-      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     </body>
   </html>
